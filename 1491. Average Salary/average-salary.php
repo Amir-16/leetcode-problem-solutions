@@ -20,7 +20,7 @@ class Solution{
        }
      // echo $sum;
 
-      $result = $sum -($mx + $mn) /(($n-2)*1.0);
+      $result = $sum -($mx +$mn)/ ($n-2);
 
       echo $result;
 
@@ -31,4 +31,4 @@ class Solution{
 }
  
 $ans = new Solution();
-$ans->average([10,20,40,50,70]);
+$ans->average([20,40,50,70,10]);
