@@ -5,30 +5,36 @@ class Solution{
 
     public $mx;
     public $mn;
-    public $n ;
+    public $n;
     function average(array $salary){
          $sum =0;
-        $n =sizeof($salary);
-
+         $n=sizeof($salary);
         for($i=0;$i<$n;$i++){
            // array_push($salary,$i);
            $sum = $sum + $salary[$i];
-            $value[] =$salary[$i];
-           $mx =max($value);
-           $mn = min($value);
+          $value[] =$salary[$i];
+          $mx = max($value);
+          $mn =min($value);
          
        }
-     // echo $sum;
+      // echo $sum;
+    //  echo $mx.PHP_EOL;
+    // echo $mn.PHP_EOL;
 
-      $result = $sum -($mx +$mn)/ ($n-2);
+   $result = ($sum -($mx+ $mn))/(($n- 2)*1.0);
+   if ($n >2){
+      return  $result;
 
-      echo $result;
-
-           // $sum =array_sum($salary);
+   }
+   else{
+     return 0;
+   }
+  
         
     }
 
 }
+
  
 $ans = new Solution();
-$ans->average([20,40,50,70,10]);
+$ans->average([10000,20000,50000,70000]);
