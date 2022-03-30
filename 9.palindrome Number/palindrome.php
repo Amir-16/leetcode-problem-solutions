@@ -1,21 +1,35 @@
 <?php
 
-class Solution{
+class Solution{ 
 
 
+function isPalindrome( $x) {
 
-function isPalindrome($input) {
-    $middle = strlen($input) / 2;
-    $firstHalf = substr($input, 0, floor($middle));
-    $secondHalf = substr($input, ceil($middle));
-    return $firstHalf == strrev($secondHalf);
+    $checkNo =$x;
+    $reverseno=0;
+
+    while(floor($checkNo) && $checkNo >0){
+
+        $m =$checkNo %10;
+        $reverseno = $reverseno * 10 + $m;
+        $checkNo =$checkNo /10;
+
+    }
+    if ($reverseno == $x ){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+
+
 }
 
-//echo palindrome("racecar") ? "Palindrome" : "Not a palindrome";
-
 }
 
-$result = new Solution();
-echo $result->isPalindrome(-121) ? "Palindrome" : "Not a palindrome";
+$ans = new Solution();
+
+echo $ans->isPalindrome(1441);
+
 
 ?>
