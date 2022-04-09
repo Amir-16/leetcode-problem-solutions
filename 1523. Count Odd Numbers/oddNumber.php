@@ -1,4 +1,5 @@
 <?php
+
 class Solution {
 
     /**
@@ -6,20 +7,21 @@ class Solution {
      * @param Integer $high
      * @return Integer
      */
+   
     function countOdds(int $low, int $high) {
+        $count = 0;
+       for($i= $low; $i<=$high; $i++){
+           if($i %2 == 1){
+            $count++;
+           }
+       }
 
-        $data[] =range($low,$high);
+       echo $count;
 
-        $n =sizeof($data);
-
-        echo $n;
+        
         
     }
 }
 
-
 $ans = new Solution();
-$ans->countOdds(5,10);
-
-
-?>
+$ans->countOdds(3,7);
