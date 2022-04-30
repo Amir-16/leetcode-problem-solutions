@@ -16,7 +16,7 @@ class Solution {
            }
        }
 
-       echo $count;
+       return ($high + 1)/2 - $low /2;
 
         
         
@@ -25,3 +25,6 @@ class Solution {
 
 $ans = new Solution();
 $ans->countOdds(3,7);
+
+
+?>
