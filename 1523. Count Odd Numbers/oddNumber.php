@@ -7,6 +7,8 @@ class Solution {
      * @param Integer $high
      * @return Integer
      */
+   public $high;
+   public $low;
    
     function countOdds(int $low, int $high) {
         $count = 0;
