@@ -17,7 +17,7 @@ class Solution{
           $mn =min($value);
          
        }
-      // echo $sum;
+      echo $sum;
     //  echo $mx.PHP_EOL;
     // echo $mn.PHP_EOL;
 
@@ -37,4 +37,7 @@ class Solution{
 
  
 $ans = new Solution();
-$ans->average([10000,20000,50000,70000]);
+$ans->average([10000,20000,50000,70000]);   
+
+
+?>
