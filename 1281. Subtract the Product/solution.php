@@ -31,7 +31,7 @@ class Solution
 
 
 $result = new Solution();
-$result->subtractProductAndSum(234);
+$result->subtractProductAndSum(4421);
 
 
 
