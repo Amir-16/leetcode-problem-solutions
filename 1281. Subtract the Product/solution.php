@@ -3,32 +3,21 @@
 class Solution
 {
 
-    /**
-     * @param Integer $n
-     * @return Integer
-     */
-
-    public $n;
-//
-
     function subtractProductAndSum(int $n)
     {
         
             $product=1;
             $sum =0;
         while($n >0){
-        
            
-
-            $product *= ($n % 10);
-           $sum += ($n % 10);
-
-            $n = $n/10;
+            $mod = $n % 10;
+            $product *= $mod;
+            $sum += $mod;
+            $n /= 10;
 
         }
 
         echo $product - $sum;
-
 
     }
 
@@ -36,7 +25,7 @@ class Solution
 
 
 $result = new Solution();
-$result->subtractProductAndSum(4321);
+$result->subtractProductAndSum(4421);
 
 
 
