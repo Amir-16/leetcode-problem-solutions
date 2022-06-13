@@ -3,34 +3,29 @@
 
 class Solution
 {
- 
-
-    function hammingWeightint(int $n)
-    {
-
-          $pivot =1;
-         $sum =0;
     
-        for($i =0; $i<32;$i++){
+    function hammingWeight(int $n)
+    {
+        $pivot =1;
+        $invert =0;
+        $count =0;
 
-             $check = $pivot << $i;
-
-             if(($n & $check) == $check){
-                 $sum++;
-             }
-
-             echo $sum;
-             
+        for($i=0; $i<32; $i++){
+            
+            if( ($n & $pivot) != 0 ){
+                $count ++;
+            }
+           
+            $pivot = $pivot << 1;
         }
 
+        return $count;
     }
 }
 
 
 $solution = new Solution();
-
-$solution->hammingWeightint(00000000000000000000000000001011);
-
+$solution->hammingWeight(00000000000000000000000000001011);
 
 
 ?>
