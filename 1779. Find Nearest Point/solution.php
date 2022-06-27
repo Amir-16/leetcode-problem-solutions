@@ -9,9 +9,11 @@ class Solution
      * @param Integer[][] $points
      * @return Integer
      */
-    function nearestValidPoint($x, $y, $points)
+    function nearestValidPointiny(int $x, int $y,  array $points)
     {
+        
     }
+
 }
 
 
