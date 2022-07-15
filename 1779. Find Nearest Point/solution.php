@@ -3,17 +3,15 @@
 class Solution
 {
 
-    /**
-     * @param Integer $x
-     * @param Integer $y
-     * @param Integer[][] $points
-     * @return Integer
-     */
-    function nearestValidPointiny(int $x, int $y,  array $points)
+
+    public $x;
+    public $y;
+    
+    function nearestValidPoint(int $x, int $y,  array $points)
     {
          $index = -1;
 
-         $distance =PHP_INT_MAX;
+         $distance = PHP_INT_MAX;
 
          $n =sizeof($points);
 
@@ -22,7 +20,7 @@ class Solution
             if($x == $points[$i][0] || $y ==$points[$i][1]){
 
                 $current_dis =abs( $x - $points[$i][0]) + abs($y - $points[$i][1]);
-
+                
                 if($current_dis < $distance){
                     $distance = $current_dis;
                     $index = $i;
@@ -41,6 +39,6 @@ class Solution
 
 $solution = new Solution();
 
-$solution->nearestValidPointiny(3, 4, [[2, 4]]);
+$solution->nearestValidPoint(3, 4, [[2, 3]]);
 
 ?>
