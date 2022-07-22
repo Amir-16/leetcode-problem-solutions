@@ -4,35 +4,31 @@ class Solution {
 
     function largestPerimeter(array $nums) {
 
-      sort($nums);
+        sort($nums);
 
-        $sum =0;
         $n = sizeof($nums);
 
-        for($i= $n-1; $i>1 ;--$i){
+        for($i= $n-3; $i>=0 ; $i--){
         
         //    $sum = $sum + $nums[$i];
-        if($nums[$i -1] + $nums[$i-2] > $nums[$i]){
+        if($nums[$i ] + $nums[$i -1 ] > $nums[$i - 2]){
 
-            $total =$nums[$i] + $nums[$i-1] +$nums[$i -2];
+        $total= ($nums[$i] +$nums[$i - 1] + $nums[$i - 2] );
 
-            echo $total;
-        }
+        echo $total;
 
-        return 0;
+        } else {
+
+        echo 0;
+        } 
            
         }
-
-    echo $sum;
-  
-        
     }
 }
 
 $solution = new Solution();
 
-$solution->largestPerimeter([1,2,]);
-
+$solution->largestPerimeter([3, 6, 2, 3]);
 
 
 ?>
