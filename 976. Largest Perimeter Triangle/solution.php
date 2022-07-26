@@ -8,18 +8,19 @@ class Solution {
 
         $n = sizeof($nums);
 
-        for($i= $n-3; $i>=0 ; $i--){
+        for($i= $n-3; $i>=0 ; --$i){
         
         //    $sum = $sum + $nums[$i];
-        if($nums[$i ] + $nums[$i -1 ] > $nums[$i - 2]){
+        $total =0;
+        if($nums[$i ] + $nums[$i +1 ] >= $nums[$i + 2]){
 
-        $total= ($nums[$i] +$nums[$i - 1] + $nums[$i - 2] );
+        $total= ($nums[$i] +$nums[$i + 1] + $nums[$i + 2] );
 
         echo $total;
 
         } else {
 
-        echo 0;
+        echo 1;
         } 
            
         }
@@ -28,7 +29,9 @@ class Solution {
 
 $solution = new Solution();
 
-$solution->largestPerimeter([3, 6, 2, 3]);
+$solution->largestPerimeter([
+    [1, 2, 1]
+]);
 
 
 ?>
