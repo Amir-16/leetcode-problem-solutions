@@ -21,7 +21,7 @@ class Solution
 }
 
 $solution = new Solution;
-$solution->largestPerimeter([1,2,1]);
+$solution->largestPerimeter([3, 6, 2, 3]);
 
 
 ?>
