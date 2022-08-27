@@ -23,7 +23,9 @@ class Solution
                 if(!isset($str[$i])){
                     break 2;
                 }
-                if($str)
+                if($strs as $str){
+
+                }
             }
             
         }
