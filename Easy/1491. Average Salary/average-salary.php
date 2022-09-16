@@ -17,9 +17,9 @@ class Solution{
           $mn =min($value);
          
        }
-      echo $sum;
-    //  echo $mx.PHP_EOL;
-    // echo $mn.PHP_EOL;
+    //  echo $sum;
+     echo $mx.PHP_EOL;
+     echo $mn.PHP_EOL;
 
    $result = ($sum -($mx+ $mn))/(($n- 2)*1.0);
    if ($n >2){
