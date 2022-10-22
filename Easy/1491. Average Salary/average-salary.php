@@ -9,12 +9,14 @@ class Solution{
     function average(array $salary){
          $sum =0;
          $n=sizeof($salary);
-        for($i=0;$i<$n;$i++){
+      for($i=0;$i<$n;$i++){
            // array_push($salary,$i);
-           $sum = $sum + $salary[$i];
-          $value[] =$salary[$i];
-          $mx = max($value);
-          $mn =min($value);
+            $sum = $sum + $salary[$i];
+            $value[] =$salary[$i];
+            //take max value from array
+            $mx = max($value);
+            //take min value from array
+            $mn =min($value);
          
        }
     //  echo $sum;
@@ -26,12 +28,13 @@ class Solution{
       return  $result;
 
    }
-   else{
+   else
+   {
      return 0;
    }
   
         
-    }
+ }
 
 }
 
