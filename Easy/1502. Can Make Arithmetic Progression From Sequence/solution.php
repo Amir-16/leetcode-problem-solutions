@@ -8,7 +8,7 @@ class Solution {
     function canMakeArithmeticProgression(array $arr) {
 
      
-        $sortData= sort($arr);
+        sort($arr);
 
         $difference = $arr[1] - $arr[0];
 
@@ -19,10 +19,13 @@ class Solution {
             if($arr[$i]-$arr[$i-1] != $difference){
 
                 return false;
+            }else{
+
+                return true;
             }
         }  
         
-        return true;
+       
         
     }
 }
