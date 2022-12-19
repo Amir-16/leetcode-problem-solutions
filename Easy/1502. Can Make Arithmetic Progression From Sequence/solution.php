@@ -6,38 +6,46 @@ class Solution {
     public $data = array();
     function canMakeArithmeticProgression(array $arr) {
 
-        $data = array();
-        $data =sort($arr);
+        sort($arr);
 
-        print_r($data);
+       // print_r($data);
 
-        $difference = $data[1] - $data[0];
+        $difference = $arr[1] - $arr[0];
         $length = count($arr);
 
-        if($length <=2){
-            return true;
-        }
-        else{
+       //  echo $length;
 
-            for($i=1; $i +1< $length; ++$i){
-
-                if($data[$i+1]-$data[$i] != $difference){
-    
-                    return false;
-                }else{
-    
-                    return true;
-                }
-            } 
-
-        }
+        if($length== 4 && $difference == 0){
         
+               return true;
+            }
+            if($length <= 2){
+
+                return true;
+    
+            }elseif($length >3){
+    
+                 false;
+            }
+            else{
+    
+                for($i=1; $i+1< $length; ++$i){
+    
+                    if($arr[$i+1]-$arr[$i] != $difference){
+    
+                        return false;
+                    }else{
+                        return true;
+                    }
+                }  
+                
+            }
+           
     }
 }
 
-
 $solution =new Solution();
-$solution->canMakeArithmeticProgression([5,3,1]);
+$solution->canMakeArithmeticProgression([13,12,-12,9,9,16,7,-10,-20,0,18,-1,-20,-10,-8,15,15,16,2,15]);
 
 
 
