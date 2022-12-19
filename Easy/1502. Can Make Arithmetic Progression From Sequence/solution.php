@@ -3,29 +3,34 @@
 
 class Solution {
 
-   // public $arr;
-
+    public $data = array();
     function canMakeArithmeticProgression(array $arr) {
 
-     
-        sort($arr);
+        $data = array();
+        $data =sort($arr);
 
-        $difference = $arr[1] - $arr[0];
+        print_r($data);
 
+        $difference = $data[1] - $data[0];
         $length = count($arr);
 
-        for($i=2; $i< $length;$i--){
+        if($length <=2){
+            return true;
+        }
+        else{
 
-            if($arr[$i]-$arr[$i-1] != $difference){
+            for($i=1; $i +1< $length; ++$i){
 
-                return false;
-            }else{
+                if($data[$i+1]-$data[$i] != $difference){
+    
+                    return false;
+                }else{
+    
+                    return true;
+                }
+            } 
 
-                return true;
-            }
-        }  
-        
-       
+        }
         
     }
 }
