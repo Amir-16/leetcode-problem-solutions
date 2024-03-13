@@ -12,7 +12,8 @@ class Solution {
 
         $commonData = array_intersect($nums1 , $nums2);
 
-        if(!empty($commonData)) {
+        if (!empty($commonData)) {
+
             $this->result = min($commonData);
 
              return $this->result;
