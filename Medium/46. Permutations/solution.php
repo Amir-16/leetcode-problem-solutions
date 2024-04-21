@@ -8,7 +8,6 @@ class Solution
      */
     public function permute($nums)
     {
-
         $results = [];
 
         $this->backtrack($nums, [], $results);
