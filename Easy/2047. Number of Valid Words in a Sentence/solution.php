@@ -11,8 +11,6 @@ class Solution
         // it will preg check check of each word
         $words = preg_split("/[^a-zA-Z]+/", $sentence);
 
-        return $words;
-
         $validWordCount = 0;
 
         foreach ($words as $word) {
@@ -28,6 +26,6 @@ class Solution
 
 $solution = new Solution();
 
-$result = $solution->countValidWords("!this  1-s b8d!");
+$result = $solution->countValidWords("alice and  bob are playing stone-game10");
 
 print_r($result);
