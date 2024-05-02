@@ -10,11 +10,12 @@ class Solution
     public function reversePrefix(string $word, string $ch)
     {
         $index = strpos($word, $ch);
+
         if ($index === false) {
             return $word;
         }
 
-        $firstConcateWord = substr($word, 0, $index + 1);
+        return $firstConcateWord = substr($word, 0, $index + 1);
 
         $data = strrev($firstConcateWord) . substr($word, $index + 1);
 
