@@ -1,11 +1,13 @@
 <?php
-class Solution {
+class Solution
+{
 
     /**
      * @param String[] $words
      * @return Integer
      */
-    function uniqueMorseRepresentations($words) {
-        
+    public function uniqueMorseRepresentations($words)
+    {
+
     }
 }
