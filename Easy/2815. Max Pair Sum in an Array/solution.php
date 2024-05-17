@@ -1,11 +1,13 @@
 <?php
-class Solution {
+class Solution
+{
 
     /**
      * @param Integer[] $nums
      * @return Integer
      */
-    function maxSum($nums) {
-        
+    public function maxSum($nums)
+    {
+
     }
 }
