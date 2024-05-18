@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Definition for a binary tree node.
  * class TreeNode {
@@ -12,13 +13,17 @@
  *     }
  * }
  */
-class Solution {
+class Solution
+{
 
     /**
      * @param TreeNode $root
      * @return Boolean
      */
-    function evaluateTree($root) {
-        
+    function evaluateTree($root)
+    {
+        if ($root == null) {
+            return false;
+        }
     }
 }
