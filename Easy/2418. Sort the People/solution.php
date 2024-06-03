@@ -1,7 +1,6 @@
 <?php
 class Solution
 {
-
     /**
      * @param String[] $names
      * @param Integer[] $heights
