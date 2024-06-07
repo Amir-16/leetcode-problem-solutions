@@ -24,7 +24,7 @@ class Solution {
 
         $oddCount = false ;
 
-        foreach($charCount as $item) { 
+        foreach($charCount as $item) {  
 
             if ( $item  % 2  == 0 ) {
                 $palindromeMaxLength += $item;
