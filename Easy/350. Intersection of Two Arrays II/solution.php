@@ -8,7 +8,7 @@ class Solution {
      */
 
     //  this interesting prblem check the uniqueness of two integers arrays  . array_intersect first fill
-    // all elements from array1  . thats why we hav to check the uniqueness of two integers
+    // all elements from array1  . thats why we have to check the uniqueness of two integers
     function intersect(array $nums1, array $nums2) {
 
         $result = [];
