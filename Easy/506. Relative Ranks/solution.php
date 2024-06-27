@@ -3,32 +3,28 @@ class Solution
 {
     public function findRelativeRanks($score)
     {
-        // Sort the scores in descending order
-        arsort($score);
 
-        $medalRanks = [
-            "Gold Medal",
+        $intialScore = array_flip($score);
+
+        krsort($intialScore);
+
+        $medalRanks =
+            ["Gold Medal",
             "Silver Medal",
-            "Bronze Medal",
-        ];
+            "Bronze Medal"];
 
-        $result = [];
-
-        foreach ($score as $index => $scorer) {
+        foreach (array_values($intialScore) as $index => $scorer) {
             // Determine the rank
-            if ($index < 3) {
-                $rank = $medalRanks[$index];
-            } else {
-                $rank = strval($index + 1);
-            }
-
-            $result[] = $rank;
+            $score[$scorer] = array_shift($medalRanks) ?? strval($index + 1);
         }
-        return $result;
+        return $score;
+
     }
 }
 
 // Example usage
 $solution = new Solution();
+
 $score = [10, 3, 8, 9, 4];
+
 print_r($solution->findRelativeRanks($score));
