@@ -13,6 +13,7 @@ class Solution
         for ($i = 0; $i < $count; $i++) {
 
             for ($j = $i + 1; $j < $count; $j++) {
+                
                 if ($nums[$i] == $nums[$j]) {
                     $countPairs++;
                 }
