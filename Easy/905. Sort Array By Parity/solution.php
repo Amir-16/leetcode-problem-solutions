@@ -11,11 +11,12 @@ class Solution
         $odd = [];
 
         foreach ($nums as $number) {
-            if ($number % 2 == 0) {
-                array_push($even, $number);
-            } else {
-                array_push($odd, $number);
-            }
+
+            match ($number % 2) {
+                0 => array_push($even, $number),
+                1 => array_push($odd, $number)
+
+            };
         }
 
         return array_merge($even, $odd);
