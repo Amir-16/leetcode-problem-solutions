@@ -20,11 +20,3 @@ class Solution
         return $count;
     }
 }
-
-$s = "xyzzaz";
-
-$solution = new Solution();
-
-$result = $solution->countGoodSubstrings($s);
-
-echo $result;
