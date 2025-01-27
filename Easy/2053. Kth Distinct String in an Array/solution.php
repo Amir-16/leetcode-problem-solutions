@@ -10,7 +10,7 @@ class Solution
     {
         $counts = array_count_values($arr);
 
-        $result = array_filter($arr, callback: function ($value) use ($counts) {
+        $result = array_filter($arr, function ($value) use ($counts) {
             return $counts[$value] === 1;
         });
 
